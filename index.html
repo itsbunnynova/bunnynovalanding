@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Bunnynova — Launching Soon</title>
+<head>
+  <meta charset="UTF-8" />
+  <title>Bunnynova — Launching Soon</title>
 
-    <!-- Make the page responsive on phones -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <style>
-      html,
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Default: desktop / laptop – show full image, no cropping */
+    body {
+      background-color: #f6f2ec;           /* soft frame colour behind */
+      background-image: url("landing.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;     /* keep logo/icon area at top */
+      background-size: contain;            /* show full image */
+      min-height: 100vh;
+    }
+
+    /* Phones & small tablets: use mobile image, allowed to crop */
+    @media (max-width: 768px) {
       body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
+        background-image: url("landing-mobile.jpg");
+        background-position: top center;
+        background-size: cover;           /* fill screen, crop from bottom/sides */
       }
-
-      /* Default: desktop / laptop version */
-      body {
-        background-image: url("landing.jpg"); /* your existing web image */
-        background-size: cover;               /* fills screen, may crop */
-        background-position: center center;   /* keep center visible */
-        background-repeat: no-repeat;
-      }
-
-      /* Phones & small tablets: use the mobile image */
-      @media (max-width: 768px) {
-        body {
-          background-image: url("landing-mobile.jpg");
-        }
-      }
-    </style>
-  </head>
-  <body>
-  </body>
+    }
+  </style>
+</head>
+<body>
+</body>
 </html>
