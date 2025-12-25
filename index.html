@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Bunnynova – Launching Soon</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      background-color: #000;
+<meta charset="UTF-8">
+<title>Bunnynova – Launching Soon</title>
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
     }
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
+
+    body {
+        background: url('landing.jpg') no-repeat center center;
+        background-size: cover; /* Makes image scale perfectly */
+        background-color: black; /* fallback color */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black;
+        font-family: serif;
     }
-  </style>
+
+    .text {
+        font-size: 8vw; /* responsive text */
+        text-shadow: 0 0 20px rgba(255,255,255,0.7);
+    }
+
+    @media (min-width: 768px) {
+        .text {
+            font-size: 4vw;
+        }
+    }
+</style>
 </head>
 <body>
-  <img src="landing.jpg" alt="Bunnynova Launching Soon">
+    <div class="text">Launching soon!</div>
 </body>
 </html>
+
