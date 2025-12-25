@@ -9,30 +9,30 @@
       box-sizing: border-box;
     }
 
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
-      width: 100%;
       height: 100%;
     }
 
-    /* DESKTOP / DEFAULT (keeps the version you like now) */
-    html, body {
+    /* DESKTOP / DEFAULT  – this matches the version you liked */
+    body {
       background-color: #000;
-      background-image: url("landing.jpg");      /* desktop artwork */
+      background-image: url("landing.jpg");   /* desktop image */
       background-repeat: no-repeat;
       background-position: top center;
-      background-size: contain;                  /* keeps full image */
+      background-size: contain;               /* keeps layout, no crop */
+      min-height: 100vh;
     }
 
-    /* MOBILE OVERRIDE */
+    /* MOBILE ONLY – uses the phone artwork, fills the screen */
     @media (max-width: 768px) {
-      html, body {
-        background-color: #000;
-        background-image: url("landing-mobile.jpg"); /* mobile artwork */
+      body {
+        background-image: url("landing-mobile.jpg"); /* mobile image */
         background-repeat: no-repeat;
         background-position: top center;
-        background-size: cover;                  /* fills phone, no bars */
+        background-size: cover;                      /* fills phone */
       }
     }
   </style>
