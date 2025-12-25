@@ -13,11 +13,11 @@
 
     /* DESKTOP / DEFAULT */
     body {
-      background-color: #000;               /* basically hidden, but safe */
-      background-image: url("landing.jpg"); /* desktop artwork */
+      background-color: #000;
+      background-image: url("landing.jpg");   /* desktop artwork */
       background-repeat: no-repeat;
-      background-position: top center;      /* keep logo + icon visible */
-      background-size: cover;               /* fill screen, no side bars */
+      background-position: top center;
+      background-size: cover;                /* fills screen, no bars */
       min-height: 100vh;
     }
 
@@ -28,7 +28,7 @@
         background-image: url("landing-mobile.jpg"); /* mobile artwork */
         background-repeat: no-repeat;
         background-position: top center;
-        background-size: contain;          /* show full image again */
+        background-size: cover;              /* <— changed from contain */
         min-height: 100vh;
       }
     }
