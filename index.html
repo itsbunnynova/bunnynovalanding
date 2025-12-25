@@ -8,19 +8,23 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
+      background-color: #f5eee8; /* soft neutral to blend with the image */
     }
 
     body {
-      min-height: 100vh;
-      /* THIS is your composite image */
-      background-image: url('landing.jpg');
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;   /* fills screen, keeps layout, slight edge crop if needed */
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
   </style>
 </head>
 <body>
+  <img src="landing.jpg" alt="Bunnynova Launching Soon">
 </body>
 </html>
