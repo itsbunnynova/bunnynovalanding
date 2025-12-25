@@ -2,36 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Bunnynova — Launching Soon</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bunnynova – Launching soon</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      width: 100%;
       height: 100%;
     }
 
-    /* Default: desktop / laptop – show full image, no cropping */
-   body {
-  background-color: #000;                /* won't really show, but safe */
-  background-image: url("landing.jpg");
-  background-repeat: no-repeat;
-  background-position: top center;       /* keep logo + icon at the top */
-  background-size: cover;                /* fill the screen, no side bars */
-  min-height: 100vh;
-}
-
+    /* DESKTOP / DEFAULT */
+    body {
+      background-color: #000;               /* basically hidden, but safe */
+      background-image: url("landing.jpg"); /* desktop artwork */
+      background-repeat: no-repeat;
+      background-position: top center;      /* keep logo + icon visible */
+      background-size: cover;               /* fill screen, no side bars */
+      min-height: 100vh;
     }
 
-    /* Phones & small tablets: use mobile image, allowed to crop */
+    /* MOBILE OVERRIDE */
     @media (max-width: 768px) {
       body {
-        background-image: url("landing-mobile.jpg");
+        background-color: #000;
+        background-image: url("landing-mobile.jpg"); /* mobile artwork */
+        background-repeat: no-repeat;
         background-position: top center;
-        background-size: cover;           /* fill screen, crop from bottom/sides */
+        background-size: contain;          /* show full image again */
+        min-height: 100vh;
       }
     }
   </style>
