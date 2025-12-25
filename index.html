@@ -3,28 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <title>Bunnynova – Launching Soon</title>
+
+  <!-- This is the responsive viewport tag Google is talking about -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      background-color: #f5eee8; /* soft neutral to blend with the image */
+      height: 100%;
     }
 
     body {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
+      overflow: hidden; /* no scrolling, image fills the screen */
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
+    .landing {
+      width: 100vw;
+      height: 100vh;
+      background-image: url("landing.jpg");
+      background-size: cover;          /* fill screen, crop if needed */
+      background-position: top center; /* keep logo/icon area at top */
+      background-repeat: no-repeat;
     }
   </style>
 </head>
 <body>
-  <img src="landing.jpg" alt="Bunnynova Launching Soon">
+  <div class="landing"></div>
 </body>
 </html>
