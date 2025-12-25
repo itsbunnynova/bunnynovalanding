@@ -1,42 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Bunnynova — Launching Soon</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bunnynova — Launching Soon</title>
 
-  <!-- Make the page respond to phone screen size -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Make the page responsive on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <style>
-    /* reset */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
 
-    html,
-    body {
-      width: 100%;
-      height: 100%;
-    }
+      /* Default: desktop / laptop version */
+      body {
+        background-image: url("landing.jpg"); /* your existing web image */
+        background-size: cover;               /* fills screen, may crop */
+        background-position: center center;   /* keep center visible */
+        background-repeat: no-repeat;
+      }
 
-    body {
-      background-color: #000; /* in case image takes a moment to load */
-    }
-
-    /* full-screen background using your image */
-    .hero {
-      width: 100%;
-      height: 100vh;              /* always at least full viewport height */
-      background-image: url("landing.jpg");
-      background-size: cover;     /* fill screen, crop if needed */
-      background-repeat: no-repeat;
-      background-position: center top; /* keep top logo area visible */
-    }
-  </style>
-</head>
-<body>
-  <div class="hero"></div>
-</body>
+      /* Phones & small tablets: use the mobile image */
+      @media (max-width: 768px) {
+        body {
+          background-image: url("landing-mobile.jpg");
+        }
+      }
+    </style>
+  </head>
+  <body>
+  </body>
 </html>
