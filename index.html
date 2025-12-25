@@ -15,13 +15,15 @@
     }
 
     /* Default: desktop / laptop – show full image, no cropping */
-    body {
-      background-color: #f6f2ec;           /* soft frame colour behind */
-      background-image: url("landing.jpg");
-      background-repeat: no-repeat;
-      background-position: top center;     /* keep logo/icon area at top */
-      background-size: contain;            /* show full image */
-      min-height: 100vh;
+   body {
+  background-color: #000;                /* won't really show, but safe */
+  background-image: url("landing.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;       /* keep logo + icon at the top */
+  background-size: cover;                /* fill the screen, no side bars */
+  min-height: 100vh;
+}
+
     }
 
     /* Phones & small tablets: use mobile image, allowed to crop */
