@@ -1,86 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Bunnynova – Launching Soon</title>
-
-<style>
-    /* Reset */
+  <meta charset="UTF-8" />
+  <title>Bunnynova – Launching Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
     html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        overflow: hidden;
+      margin: 0;
+      padding: 0;
+      height: 100%;
     }
 
-    /* Background image fills screen */
-    .bg {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: url('landing.jpg') center center / cover no-repeat;
-        z-index: -1;
+    body {
+      min-height: 100vh;
+      /* THIS is your composite image */
+      background-image: url('landing.jpg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;   /* fills screen, keeps layout, slight edge crop if needed */
     }
-
-    /* Top-left logotype */
-    .logo-left {
-        position: absolute;
-        top: 3vh; 
-        left: 3vw;
-        width: min(22vw, 180px);
-    }
-
-    /* Top-center icon */
-    .logo-center {
-        position: absolute;
-        top: 3vh;
-        left: 50%;
-        transform: translateX(-50%);
-        width: min(14vw, 120px);
-    }
-
-    /* Center text */
-    .title {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-family: 'Snell Roundhand', cursive;
-        font-size: min(14vw, 110px);
-        white-space: nowrap;
-        color: black;
-        text-align: center;
-    }
-
-    /* Makes everything scale better on mobile */
-    @media (max-width: 600px) {
-        .title {
-            font-size: 12vw;
-        }
-
-        .logo-left {
-            width: 30vw;
-        }
-
-        .logo-center {
-            width: 22vw;
-        }
-    }
-</style>
+  </style>
 </head>
-
 <body>
-
-<div class="bg"></div>
-
-<!-- Make sure filenames below match EXACTLY -->
-<img src="Bunnynova_Landing Page.jpg" class="logo-left" alt="Bunnynova Logo Left">
-
-<img src="BunnyIcon.png" class="logo-center" alt="Bunnynova Icon">
-
-<div class="title">Launching<br>soon !</div>
-
 </body>
 </html>
